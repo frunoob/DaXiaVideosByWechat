@@ -1,0 +1,15 @@
+<view class="swipers">
+	<swiper indicator-dots="{{true}}" indicator-active-color="#00cc36" indicator-color="#ada0a9" autoplay="{{true}}" easing-function="easeInCubic">
+		<swiper-item wx:for="{{swiper}}" wx:key="id">
+			<navigator url="/pages/play/play?id={{item.attributes.id}}" hover-class="navigator-hover" open-type="navigate">
+				<view class="ss">
+					<image mode="scaleToFill" src="{{item.attributes.image_url}}"></image>
+
+					<view class="title">{{item.attributes.subtitle}}
+					</view>
+				</view>
+
+			</navigator>
+		</swiper-item>
+	</swiper>
+</view>

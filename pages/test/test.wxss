@@ -1,0 +1,91 @@
+/* pages/test/test.wxss */
+.search_input {
+  height: 90rpx;
+  padding: 10rpx;
+  background-color: var(--themeColor);
+  display: flex;
+}
+.input {
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 15rpx;
+  color: #666;
+  width: 650rpx;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+}
+.img1 {
+  width: 70rpx;
+  height: 70rpx;
+  background-color: red;
+  margin-left: 10rpx;
+}
+.dingbu {
+  background-color: #FDFBFB;
+  margin-left: 20rpx;
+  font-size: 32rpx;
+  color: #666666;
+  margin-top: 10rpx;
+}
+.zong {
+  background-color: #FDFBFB;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+}
+.img2 {
+  width: 340rpx;
+  height: 340rpx;
+}
+.item {
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  margin-top: 40rpx;
+  margin-bottom: 20rpx;
+  padding: 4rpx;
+  border: 1px solid #faf8f8;
+  display: flex;
+}
+.bigbox {
+  /*background-color: antiquewhite;*/
+  width: 340rpx;
+  height: 340rpx;
+}
+.smallbox {
+  margin-left: 6rpx;
+  margin-right: 2rpx;
+  /* background-color: aqua; */
+  width: 378rpx;
+  height: 340rpx;
+}
+.shuming {
+  font-size: 40rpx;
+  font-family: fantasy;
+  margin-top: 20rpx;
+  margin-bottom: 10rpx;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  color: #666666;
+}
+.zuozhe {
+  font-size: 30rpx;
+  font-family: cursive;
+  margin-top: 15rpx;
+  margin-left: 10rpx;
+  color: #666666;
+}
+.danjia {
+  margin-left: 10rpx;
+  font-family: cursive;
+  margin-top: 15rpx;
+  color: #666666;
+  font-size: 30rpx;
+}
+.baoqian {
+  background-color: #FDFBFB;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  padding-top: 380rpx;
+  text-align: center;
+}

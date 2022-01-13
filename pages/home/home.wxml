@@ -1,0 +1,28 @@
+<page-meta>
+	<navigation-bar title="手机视频网站" front-color="#fff" background-color="#000" />
+
+</page-meta>
+<view class="head">
+	<search bindtop="openLocationsercher"></search>
+	<view class="his" wx:if="{{listFlag}}">
+		<view wx:for="{{sercherStorage}}" wx:key="item.id">
+			<view class="liclass" style="color:#9E9E9E;border-bottom:0;font-size:26rpx;" id="{{item.id}}" bindtap="tapSercherStorage">
+				<text style="width:100rpx">{{item.name}}</text>
+			</view>
+		</view>
+		<view wx:if="{{sercherStorage.length!==0}}" style="text-align:center;" bindtap="clearSearchStorage">
+			 <view class="history-span">清除历史记录</view>
+		</view>
+	</view>
+
+	<tabs wx:if="{{!listFlag}}" tabs="{{tabs}}" binditemChange="handleItemChange"></tabs>
+
+</view>
+
+
+<view class="body" wx:if="{{!listFlag}}">
+	<block>
+		<swiper wx:if="{{tabs.currentNav==0}}" swiper="{{swiper}}"></swiper>
+		<movies movies="{{movies}}"></movies>
+	</block>
+</view>

@@ -1,0 +1,54 @@
+<page-meta>
+	<navigation-bar title="{{nbTitle}}" loading="{{nbLoading}}" front-color="{{nbFrontColor}}" background-color="{{nbBackgroundColor}}" />
+
+</page-meta>
+
+<view class='vv' wx:for='{{video_data}}' wx:key=''>
+	<view class='block' style='margin-left:20rpx;'>
+		<view id="{{index}}" class="cover" style="display: {{ _index == index ? 'none' : 'block' }};" bindtap="videoPlay">
+			<!-- 标题 -->
+			<text class='text'>{{item.attributes.title}} </text>
+			<!-- 视频图层 -->
+			<image class="videoVideo2" src="{{(item.attributes.image_url == null || item.attributes.image_url ==''||item.attributes.image_url == undefined)?image:item.attributes.image_url}}" mode="scaleToFill">
+				<!-- 视频按钮 -->
+				<image class="videoPlay" src="/pages/resource/icon/toplay.png" mode="scaleToFill"></image>
+			</image>
+		</view>
+	</view>
+	<!-- 视频 -->
+	<video src="{{item.attributes.url}}" id="{{index}}" class='video' wx:if="{{_index == index}}">
+	</video>
+	<view class="bottom">
+		<view class="left">
+				
+			<view class="author">
+				<image class="touXiang" src="{{item.attributes.author_image}}" mode="scaleToFill" lazy-load="false" binderror="" bindload="" />
+				<view class="author_name" selectable="false" space="false" decode="false">
+					{{item.attributes.author_name}}
+				</view>
+			</view>
+
+		</view>
+		<wxs module="filter">
+			var toFixed = function (value) {
+			return value.toFixed(2);
+			};
+
+			module.exports = {
+			toFixed :toFixed
+			}
+		</wxs>
+		<view class="right">
+			<view class="like">
+				<image class="like_image" src="{{item.islike?icon_like:icon_unlike}}"  mode="aspectFit" lazy-load="false" bindtap="like" data-index="{{index}}" binderror="" bindload="" />
+				<view  class="likeNum">{{item.attributes.like_num>10000?(filter.toFixed(item.attributes.like_num/10000)+'万'):item.attributes.like_num}}</view>
+			</view>
+			<view class="share" bindtap="" wx:if="{{true}}">
+			<button plain="true" class="share_button" hover-class="none" open-type="share"><image class="share_image" src="{{weixin}}" mode="aspectFit" lazy-load="false" binderror="" bindload="" /></button>
+				
+				<view class="share_text">分享</view>
+			</view>
+		</view>
+
+	</view>
+</view>

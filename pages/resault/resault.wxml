@@ -1,0 +1,24 @@
+<!--pages/resault/resault.wxml-->
+<!-- <text>{{inputvalue}}</text> -->
+<!--pages/myvideos/myvideos.wxml-->
+<page-meta>
+	<navigation-bar title="{{inputvalue}}" />
+</page-meta>
+<view class="top" wx:if="{{true}}">
+	<view class="delete">
+		<text class="d">共搜索到{{length}}条记录</text></view>
+</view>
+<view class="myvideos">
+
+	<block wx:for="{{videos}}">
+		<navigator url="/pages/play/play?id={{item.attributes.id}}" hover-class="navigator-hover" open-type="navigate">
+			<view class="videos">
+				<image mode="scaleToFill" src="{{(item.attributes.image_url == null || item.attributes.image_url ==''||item.attributes.image_url == undefined)?image:item.attributes.image_url}}" class="left"></image>
+				<view class="right">{{item.attributes.title}}
+					<view class="sub">{{item.attributes.subtitle}}</view>
+				</view>
+			</view>
+		</navigator>
+	</block>
+
+</view>

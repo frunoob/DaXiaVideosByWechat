@@ -1,0 +1,22 @@
+<view class="LC2">
+	<navigator url="/pages/about/about" hover-class="navigator-hover" open-type="navigate">
+		<view class="like top">
+			<view class="top_title">关于</view>
+			<image class="top_image" src="/pages/resource/icon/right.png"></image>
+		</view>
+	</navigator>
+</view>
+<view class="LC2 LC3">
+	<navigator url="/pages/agree/agree" hover-class="navigator-hover" open-type="navigate">
+		<view class="like top">
+			<view class="top_title">用户协议</view>
+			<image class="top_image" src="/pages/resource/icon/right.png"></image>
+		</view>
+	</navigator>
+</view>
+<view class="LC2 LC4">
+		<view  bindtap="outlogin" class="like top">
+			<view class="top_title">退出小程序</view>
+			<image class="top_image" src="/pages/resource/icon/right.png"></image>
+		</view>
+</view>

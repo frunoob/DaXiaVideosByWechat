@@ -1,0 +1,88 @@
+<!--pages/play/play.wxml-->
+<view class="all">
+	<video class="videos" src="{{changeSet}}" binderror="show" initial-time="0" autoplay="{{true}}" loop="false">
+
+	</video>
+<block wx:if="{{changeSet == ''  }}">
+	<text class="error" selectable="false" space="false" decode="false">
+		非常非常非常非常抱歉
+		视频暂无资源！！！
+	</text>
+	  
+</block>
+<block wx:if="{{haveerror}}">
+	<text class="error2" selectable="false" space="false" decode="false">
+		视频资源可能出现问题了，请耐心等待或者离开此页面
+	</text>
+</block>
+  
+	<view class="tro">
+		<view class="title">
+			<view class="t">
+				{{videos.title}}<text wx:if="{{videos.date>1}}">(第{{currentSets}}集)</text>
+			</view>
+			<view class="subtitle">
+				{{videos.intro}}
+			</view>
+		</view>
+	</view>
+	<wxs module="filter">
+		var toFixed = function (value) {
+		return value.toFixed(2);
+		};
+
+		module.exports = {
+		toFixed :toFixed
+		}
+	</wxs>
+	<view class="LCS">
+		<view class="d ">
+			<view class="c">
+				<view class="like">
+					<image class="like_image" src="{{islike?icon_like:icon_unlike}}" mode="aspectFit" lazy-load="false" bindtap="like" data-index="{{index}}" binderror="" bindload="" />
+					<view class="likeNum">{{videos.like_num>10000?(filter.toFixed(videos.like_num/10000)+'万'):videos.like_num}}</view>
+				</view>
+			</view>
+		</view>
+		<view class="d collec">
+			<view class="c">
+				<view class="like">
+					<image class="like_image" src="{{iscollec?icon_uncollec:icon_collec}}" mode="aspectFit" lazy-load="false" bindtap="collec" data-index="{{index}}" binderror="" bindload="" />
+					<view class="likeNum">{{videos.collec_num>10000?(filter.toFixed(videos.collec_num/10000)+'万'):videos.collec_num}}</view>
+				</view>
+			</view>
+		</view>
+		<view class="d share" wx:if="{{true}}">
+			<view class="c">
+				<view class="like">
+					<button plain="true" class="share_button" hover-class="none" open-type="share">
+						<image class="share_image" src="{{weixin}}" mode="aspectFit" lazy-load="false" bindtap="" data-index="{{index}}" binderror="" bindload="" /></button>
+
+					<view class="likeNum">分享</view>
+				</view>
+			</view>
+		</view>
+	</view>
+
+
+	<view class="sets" wx:if="{{videos.date>1}}">
+		<view class="title">
+			<view class="left">剧集
+			</view>
+			<view class="right">更新至{{videos.date}}集
+			</view>
+		</view>
+		<scroll-view class="scroll" scroll-y>
+			<view class="bottom">
+				<block wx:for="{{videos.date}}">
+					<view class="num {{currentSets==(videos.date-index)?'active':''}}" bindtap="changeSets" data-num="{{videos.date-index}}">
+						<view class="n">{{videos.date-index}}</view>
+					</view>
+				</block>
+
+			</view>
+		</scroll-view>
+
+
+	</view>
+</view>

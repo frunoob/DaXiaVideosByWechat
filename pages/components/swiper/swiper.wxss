@@ -1,0 +1,22 @@
+/* pages/components/swiper/swiper.wxss */
+page .swipers {
+  width: 750rpx;
+}
+page swiper {
+  width: 750rpx;
+  height: calc(100vw * 680/1242);
+}
+page swiper image {
+  width: 750rpx;
+}
+page swiper .ss {
+  position: relative;
+}
+page swiper .ss .title {
+  position: absolute;
+  top: 20rpx;
+  left: 20rpx;
+  color: #fff;
+  font-weight: 700;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+}

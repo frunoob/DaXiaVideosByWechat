@@ -1,0 +1,146 @@
+/* pages/mine/mine.wxss */
+page {
+  height: 100%;
+  width: 100%;
+}
+.mine {
+  display: flex;
+  flex-direction: column;
+  width: 750rpx;
+  height: 100%;
+  background-color: #f5f8fb;
+}
+.mine .head {
+  background-color: #ffffff;
+  display: flex;
+  height: 200rpx;
+  width: 100%;
+  margin-bottom: 20rpx;
+}
+.mine .head .myImage {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 100%;
+  margin: 20rpx 0 0 30rpx;
+}
+.mine .head .myId {
+  height: fit-content;
+  position: relative;
+  top: 50%;
+  margin-left: 20rpx;
+  transform: translateY(-50%);
+}
+.mine .history {
+  margin-bottom: 20rpx;
+  height: fit-content;
+  background-color: #fff;
+  padding-bottom: 20rpx;
+}
+.mine .history .top {
+  height: 80rpx;
+  display: flex;
+  position: relative;
+}
+.mine .history .top .top_title {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 20rpx;
+}
+.mine .history .top .top_image {
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  right: 20rpx;
+  top: 17rpx;
+}
+.mine .history .bottom {
+  margin-top: 20rpx;
+  height: 240rpx;
+  width: 100%;
+}
+.mine .history .bottom .scroll {
+  width: 100%;
+  height: 240rpx;
+  white-space: nowrap;
+}
+.mine .history .bottom .scroll .scroll_item {
+  display: inline-block;
+}
+.mine .history .bottom .list {
+  display: flex;
+  flex-direction: column;
+  width: 270rpx;
+  height: 240rpx;
+  margin-right: 20rpx;
+}
+.mine .history .bottom .list .list_image {
+  height: 180rpx;
+}
+.mine .history .bottom .list .list_title {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 270rpx;
+}
+.mine .LC2 {
+  height: 90rpx;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 5rpx;
+}
+.mine .LC2 .like {
+  height: 90rpx;
+  position: relative;
+}
+.mine .LC2 .like .top_title {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 20rpx;
+}
+.mine .LC2 .like .like.top {
+  margin-bottom: 2rpx;
+}
+.mine .LC2 .like .top_image {
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  right: 20rpx;
+  top: 17rpx;
+}
+.mine .LC3 {
+  margin-bottom: 20rpx;
+}
+.mine .LC {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 180rpx;
+}
+.mine .LC .like {
+  height: 90rpx;
+  position: relative;
+}
+.mine .LC .like .top_title {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 20rpx;
+}
+.mine .LC .like .like.top {
+  margin-bottom: 2rpx;
+}
+.mine .LC .like .top_image {
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  right: 20rpx;
+  top: 17rpx;
+}
+.mine .LC .collect {
+  height: 90rpx;
+}

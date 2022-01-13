@@ -1,0 +1,36 @@
+.tabs{
+  background-color: #ffffffF1;
+  height: 50rpx;
+  width: 100%;
+  // position: fixed;
+  top: 0rpx;
+  left: 0;
+  z-index: 99;
+  overflow: hidden;
+  line-height: 40rpx;
+  white-space: nowrap;
+  font-size: 32rpx;
+  padding-top:15rpx;
+  padding-bottom:10rpx;
+  border-bottom: solid #c0c3c0 1px;
+  .active{
+    color:#16e074;
+    &::after{
+      position: absolute;
+      content:"";
+      top: 100%;
+      left:25%;
+      width: 50%;
+      border-bottom: #16e074 solid 2px;
+      
+    }
+  }
+  .tab{
+    
+    position: relative;
+    display: inline-block;
+    width: 20%;
+    text-align: center;
+    
+  }
+}

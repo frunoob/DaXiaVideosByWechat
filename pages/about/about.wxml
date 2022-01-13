@@ -1,0 +1,6 @@
+<!--pages/about/about.wxml-->
+
+
+<view class="agree">
+<text>大三下安卓课设</text>
+</view>

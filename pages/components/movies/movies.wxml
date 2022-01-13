@@ -1,0 +1,19 @@
+<block wx:for="{{movies}}" wx:for-item="mov">
+<view class="hot">
+	<view class="hot-title title">{{mov.hottitle}}</view>
+	<view class="all">
+		<view wx:for="{{mov.hot}}" wx:key="id" class="hot-movie">
+			<navigator url="/pages/play/play?id={{item.attributes.id}}" hover-class="navigator-hover" open-type="navigate">
+				<image class="images" src="{{(item.attributes.image_url == null || item.attributes.image_url ==''||item.attributes.image_url == undefined)?image:item.attributes.image_url}}" mode="scaleToFill" lazy-load="false" binderror="noImage"/>
+				<view class="date" selectable="false" space="false" decode="false" wx:if="{{item.attributes.date>1}}">
+					更新至第{{item.attributes.date}}集
+				</view>
+				<view class="toptitle">{{item.attributes.title}}</view>
+				<view class="subtitle">{{item.attributes.subtitle}}</view>
+			</navigator>
+		</view>
+	</view>
+</view>
+	
+</block>
+  

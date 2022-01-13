@@ -1,0 +1,40 @@
+/* pages/setting/setting.wxss */
+page {
+  height: 100%;
+  width: 100%;
+  background-color: #f5f8fb;
+}
+.LC2 {
+  height: 90rpx;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 5rpx;
+}
+.LC2 .like {
+  height: 90rpx;
+  position: relative;
+}
+.LC2 .like .top_title {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 20rpx;
+}
+.LC2 .like .like.top {
+  margin-bottom: 2rpx;
+}
+.LC2 .like .top_image {
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  right: 20rpx;
+  top: 17rpx;
+}
+.LC3 {
+  margin-bottom: 20rpx;
+}
+.LC4 {
+  color: red;
+}

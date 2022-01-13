@@ -1,0 +1,10 @@
+<view>
+  <scroll-view class="tabs" scroll-x="true"  enhanced="true" show-scrollbar="false">
+  <block wx:for="{{tabs.navData}}" wx:key="index">
+  <view class="tab {{tabs.currentNav == index?'active':''}}" data-current="{{index}}" bindtap="switchNav">{{item.text}}</view>
+  </block>
+</scroll-view>
+</view>
+  
+  
+  

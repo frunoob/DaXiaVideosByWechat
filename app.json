@@ -1,0 +1,61 @@
+{
+  "pages": [
+    
+    "pages/home/home",
+    "pages/play/play",
+    "pages/mine/mine",
+    "pages/hot/hot",
+    
+    "pages/test/test",
+    "pages/myvideos_like/myvideos",
+    "pages/myvideos_collec/myvideos",
+    "pages/myvideos/myvideos",
+    "pages/resault/resault",
+    "pages/setting/setting",
+    "pages/reading/reading",
+    "pages/components/Tabs/tabs",
+    "pages/allvideos/allvideos",
+    "pages/index/index",
+    "pages/about/about",
+    "pages/agree/agree"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "您的位置信息不会泄露给第三方，仅用于本小程序"
+    }
+  },
+  "sitemapLocation": "sitemap.json",
+  "window": {
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "手机视频网站",
+    "backgroundColor": "#000",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "backgroundColor": "#ffffff",
+    "selectedColor": "#16e077",
+    "color": "#414c5c",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "pages/resource/icon/home.png",
+        "selectedIconPath": "pages/resource/icon/home-selected.png"
+      },
+      {
+        "pagePath": "pages/hot/hot",
+        "text": "短视频",
+        "iconPath": "pages/resource/icon/play.png",
+        "selectedIconPath": "pages/resource/icon/play-selected.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "pages/resource/icon/account.png",
+        "selectedIconPath": "pages/resource/icon/account-selected.png"
+      }
+    ]
+  }
+}

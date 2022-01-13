@@ -1,0 +1,14 @@
+<view class="search">
+	<view class="searchArea">
+		<view bindtap="search" class="searchIcon">
+			<image mode="widthFix" class="Icon" src="{{icon}}" />
+		</view>
+		<view class="input">
+			<input class="searchInput" bindinput="input" placeholder="请输入要搜索的内容" placeholder-class="holder" bindfocus="toSearch" bindconfirm="search" type="text" />
+		</view>
+
+
+	</view>
+	
+</view>
+

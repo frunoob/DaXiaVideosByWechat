@@ -1,0 +1,193 @@
+/* pages/mine/mine.wxss */
+page {
+    height: 100%;
+    width: 100%;
+}
+
+.mine {
+    display: flex;
+    flex-direction: column;
+    width: 750rpx;
+    height: 100%;
+    background-color: #f5f8fb;
+
+    .head {
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        height: 200rpx;
+        width: 100%;
+        margin-bottom: 20rpx;
+
+        // background-color: rgb(126, 23, 23);
+        .myImage {
+            width: 150rpx;
+            height: 150rpx;
+            border-radius: 100%;
+            margin: 20rpx 0 0 30rpx;
+        }
+
+        .myId {
+            // background-color: aqua;
+            height: fit-content;
+            position: relative;
+            top: 50%;
+            margin-left: 20rpx;
+            transform: translateY(-50%);
+        }
+    }
+
+    // 历史记录
+    .history {
+        margin-bottom: 20rpx;
+        // background-color: aqua;
+        height: fit-content;
+        background-color: #fff;
+        padding-bottom: 20rpx;
+        .top {
+            // background-color: antiquewhite;
+            height: 80rpx;
+            // line-height: 20rpx;
+            display: flex;
+            position: relative;
+
+            .top_title {
+                position: absolute;  
+                top: 50%;
+                transform: translateY(-50%);
+                // background-color: blue;
+                margin-left: 20rpx;
+            }
+
+            .top_image {
+                // background-color: aquamarine;
+                width: 40rpx;
+                height: 40rpx;
+                position: absolute;
+                right: 20rpx;
+                top: 17rpx;
+            }
+        }
+
+        .bottom {
+            margin-top: 20rpx;
+            // background-color: blueviolet;
+            height: 240rpx;
+            width: 100%;
+
+            .scroll {
+                // background-color: darkblue;
+                width: 100%;
+                height: 240rpx;
+                white-space: nowrap;
+
+                .scroll_item {
+                    display: inline-block;
+                }
+            }
+
+
+            .list {
+                // background-color: chartreuse;
+                display: flex;
+                flex-direction: column;
+                width: 270rpx;
+                height: 240rpx;
+                margin-right: 20rpx;
+
+                .list_image {
+                    // background-color: brown;
+                    height: 180rpx;
+
+                }
+
+                .list_title {
+                    // background-color: teal;
+
+                    // 超出部分用...代替
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    width: 270rpx;
+                    //
+                }
+            }
+        }
+    }
+
+    // 收藏与喜欢
+    .LC2{
+        height: 90rpx;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 5rpx;
+        .like {
+            height: 90rpx;
+            // background-color: aquamarine;
+            position: relative;
+            .top_title {
+                position: absolute;  
+                top: 50%;
+                transform: translateY(-50%);
+                // background-color: blue;
+                margin-left: 20rpx;
+
+            }
+            .like.top{
+               margin-bottom: 2rpx;
+            }
+
+            .top_image {
+                // background-color: aquamarine;
+                width: 40rpx;
+                height: 40rpx;
+                position: absolute;
+                right: 20rpx;
+                top: 17rpx;
+            }
+        }
+    }
+    .LC3{
+        margin-bottom: 20rpx;
+    }
+    .LC {
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        // background-color: antiquewhite;
+        height: 180rpx;
+
+        .like {
+            height: 90rpx;
+            // background-color: aquamarine;
+            position: relative;
+            .top_title {
+                position: absolute;  
+                top: 50%;
+                transform: translateY(-50%);
+                // background-color: blue;
+                margin-left: 20rpx;
+
+            }
+            .like.top{
+               margin-bottom: 2rpx;
+            }
+
+            .top_image {
+                // background-color: aquamarine;
+                width: 40rpx;
+                height: 40rpx;
+                position: absolute;
+                right: 20rpx;
+                top: 17rpx;
+            }
+        }
+
+        .collect {
+            height: 90rpx;
+            // background-color: aqua;
+        }
+    }
+}

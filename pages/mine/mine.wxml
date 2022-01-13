@@ -1,0 +1,64 @@
+<page-meta >
+	<navigation-bar title="{{nbTitle}}" loading="{{nbLoading}}" front-color="{{nbFrontColor}}"
+		background-color="{{nbBackgroundColor}}" />
+</page-meta>
+<view class="mine">
+	<!-- 头部个人信息 -->
+
+	<view bindtap="login" class="head">
+		<view class="myImage"><open-data type="userAvatarUrl"></open-data></view>
+		<view class="myId"><open-data type="userNickName"></open-data></view>
+	</view>
+	<!-- 观看历史 -->
+	<view class="history">
+		<navigator url="/pages/myvideos/myvideos" hover-class="navigator-hover" open-type="navigate">
+		<view class="top">
+			<view class="top_title">观看历史</view>
+			<image class="top_image" src="/pages/resource/icon/right.png"></image>
+		</view>
+		</navigator>
+
+		<view class="bottom" wx:if="{{videos.length>0}}">
+			<scroll-view class="scroll" scroll-x="true" enable-flex="true">
+				<block wx:for="{{videos}}" >
+					<view class="scroll_item">
+						<navigator url="/pages/play/play?id={{item.attributes.video_id}}" hover-class="navigator-hover" open-type="navigate">
+						<view class="list">
+							<image mode="scaleToFix" class="list_image" src="{{(item.attributes.videos_image == null || item.attributes.videos_image ==''||item.attributes.videos_image == undefined)?image:item.attributes.videos_image}}"></image>
+							<view class="list_title">{{item.attributes.title}}</view>
+						</view>
+						</navigator>
+					</view>
+				</block>
+			</scroll-view>
+		</view>
+	</view>
+	<!-- 喜欢  收藏 -->
+
+
+	<view class="LC2">
+		<navigator url="/pages/myvideos_collec/myvideos" hover-class="navigator-hover" open-type="navigate">
+			<view class="like top">
+				<view class="top_title">我的收藏</view>
+				<image class="top_image" src="/pages/resource/icon/right.png"></image>
+			</view>
+		</navigator>
+	</view>
+	<view class="LC2 LC3">
+		<navigator url="/pages/myvideos_like/myvideos" hover-class="navigator-hover" open-type="navigate">
+		<view class="like top">
+			<view class="top_title">我赞过的视频</view>
+			<image class="top_image" src="/pages/resource/icon/right.png"></image>
+		</view>
+		</navigator>
+	</view>
+	<view class="LC2">
+		<navigator url="/pages/setting/setting" hover-class="navigator-hover" open-type="navigate">
+		<view class="like top">
+			<view class="top_title">设置</view>
+			<image class="top_image" src="/pages/resource/icon/right.png"></image>
+		</view>
+		</navigator>
+	</view>
+
+</view>

@@ -1,0 +1,200 @@
+/* pages/play/play.wxss */
+page {
+    width: 750rpx;
+    height: 100%;
+}
+.error{
+    height: fit-content;
+    background-color: #fff;
+    color: #E91E63;
+    font-weight: 700;
+    font-size: x-large;
+}
+.error2{
+    height: fit-content;
+    background-color: #fff;
+    color: #8f8488;
+    font-weight: 200;
+    font-size: xx-small;
+}
+.all {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: #f7f7f7;
+
+    .videos {
+        // background-color: yellow;
+        height: 40%;
+        width: 750rpx;
+    }
+
+    .tro {
+        background-color: #fff;
+        // background-color: green;
+        height: fit-content;
+        // margin-bottom: 5rpx;
+
+        .title {
+            // height: fit-content;
+            background-color: #fff;
+            padding: 50rpx 20rpx 0 20rpx;
+
+            .t {
+                font-size: large;
+                font-weight: 600;
+
+            }
+
+            .subtitle {
+                color: #999999;
+                font-size: smaller;
+            }
+        }
+    }
+
+    //(❤ 分享  点赞  收藏
+    .LCS {
+        background-color: #fff;
+        height: 10%;
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 5rpx;
+
+        .d {
+            // align-self: center;
+            align-items: center;
+            width: fit-content;
+            flex: 3;
+            // background-color: greenyellow;
+            margin: 2rpx;
+            position: relative;
+
+            .c {
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                position: absolute;
+                align-self: center;
+                width: fit-content;
+                // background-color: yellow;
+            }
+        }
+
+        .like {
+            width: fit-content;
+            // background-color: #999999;
+            padding-top: 15rpx;
+            margin: 0 5rpx;
+            display: flex;
+            height: 71rpx;
+            align-self: center;
+
+            .like_image {
+                // background-color: rebeccapurple;
+                height: 45rpx;
+                width: 45rpx;
+                margin-right: 15rpx;
+
+            }
+
+            .likeNum {
+                //   background-color: red;
+                font-size: smaller;
+                padding-left: 5rpx;
+            }
+        }
+
+        .share_button {
+            position: relative;
+            width: 45rpx;
+            border: none;
+            padding: 0 5rpx;
+            height: 45rpx;
+
+            &::after {
+                border: none;
+            }
+
+            //             transform: translateY(-50%);
+            //             background: none;
+            // top: 50%;
+            .share_image {
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: none;
+                // background-color: rebeccapurple;
+                height: 45rpx;
+                width: 45rpx;
+                // margin-right: 15rpx;
+
+            }
+        }
+
+    }
+
+    //剧集
+    .sets {
+        background-color: #fff;
+        height: 30%;
+
+        .title {
+            display: flex;
+            position: relative;
+
+            .left {
+                // background-color: yellow;
+                margin-left: 20rpx;
+            }
+
+            .right {
+                position: absolute;
+                // background-color: orange;
+                right: 20rpx;
+                color: #999999;
+                font-size: xx-small;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        .scroll {
+            height: 421rpx;
+            background-color: #fff;
+        }
+
+        .bottom {
+            // background-color: plum;
+            // height: fit-content;
+            padding: 20rpx 0 50px 5%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            .num {
+                height: 127rpx;
+                width: 20%;
+                background-color: #f7f9fc;
+                margin-right: 20rpx;
+                margin-bottom: 20rpx;
+                position: relative;
+
+                .n {
+                    // background-color: aqua;
+                    position: absolute;
+                    text-align: center;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 100%;
+                    text-align: center;
+                }
+
+            }
+
+            .active {
+                background-color: #16e07470;
+            }
+        }
+    }
+}

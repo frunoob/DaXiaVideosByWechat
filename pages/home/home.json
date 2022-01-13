@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "search":"../components/search/search",
+    "movies":"../components/movies/movies",
+    "swiper":"../components/swiper/swiper",
+    "tabs":"../components/Tabs/tabs"
+  }
+
+  
+    
+}

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {},
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "我点赞的视频",
+    "enablePullDownRefresh": false
+}

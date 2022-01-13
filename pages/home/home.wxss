@@ -1,0 +1,44 @@
+/* pages/home/home.wxss */
+page {
+  height: 100%;
+  width: 750rpx;
+  /* align-items: center; */
+}
+page .head {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  font-size: 32rpx;
+  /*搜索历史列表外部容器样式*/
+  /*搜索历史普通样式*/
+}
+page .head .ddclass {
+  position: absolute;
+  width: 100%;
+  margin-top: 10px;
+  left: 0;
+}
+page .head .his {
+  position: absolute;
+  background-color: greenyellow;
+  display: inline-block;
+  width: 100%;
+  z-index: 99;
+}
+page .head .liclass {
+  font-size: 14px;
+  line-height: 34px;
+  color: #fff;
+  height: 34px;
+  display: block;
+  padding-left: 18px;
+  background-color: #000;
+  border-bottom: 1px solid #dbdbdb;
+}
+page .body {
+  position: absolute;
+  display: block;
+  top: 124rpx;
+}
